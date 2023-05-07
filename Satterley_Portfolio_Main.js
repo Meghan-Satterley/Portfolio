@@ -1,4 +1,4 @@
-﻿/* MENU DISPLAY */
+/* MENU DISPLAY */
 
 const navMenu = document.getElementById('nav-menu'),
 	navToggle = document.getElementById('nav-toggle'),
@@ -101,3 +101,15 @@ window.addEventListener('scroll', scrollActive)
 
 /* SCROLL REVEAL */
 
+const sr = ScrollReveal({
+	origin: 'top',
+	distance: '60px',
+	duration: 2500,
+	delay: 400,
+})
+
+sr.reveal(`.welcome_data, .welcome_social, .contact_container, .footer_container`)
+sr.reveal(`.welcome_image`, { origin: 'bottom' })
+sr.reveal(`.about_data, .skills_data, .resume_content`, { origin: 'left' })
+sr.reveal(`.about_image, .skills_content, .resume_data`, { origin: 'right' })
+sr.reveal(`.strengths_card, .projects_card`, { interval: 100 })
